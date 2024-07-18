@@ -1,0 +1,125 @@
+HTML config*/
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type: mandatory;
+}
+
+/*The body config duh*/
+body{
+  line-height: 1.5;
+  font-family: Roboto Mono;
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  background-color: black;
+  height: 95vh;
+}
+
+/*All paragraph config*/
+p{
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.icon{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.home-icon{
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 20px white;
+  color:white;
+  text-align: center;
+  cursor:pointer;
+  transition: transform 0.5s linear;
+
+}
+
+.home-icon:hover{
+  transform: scale(110%)
+}
+
+
+.header{
+  animation: opacity 1s cubic-bezier(.26,.58,.3,.86);
+  margin-bottom: 0px;
+}
+
+
+@keyframes opacity{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes blur-scroll{
+  from{
+    filter: blur(10px);
+    transform: translateX(-1000)
+  }
+
+  to{
+    filter: blur(0);
+  }
+}
+
+/*This makes items glow in.*/
+@keyframes glow-in{
+  from{
+    box-shadow: none;
+    background-size:310px;
+
+  }
+
+  to{
+    box-shadow: 0px 1px 25px 2px rgb(255, 255, 255);
+    background-size:310px;
+  }
+}
+
+/*This makes items glow out.*/
+@keyframes glow-out{
+  from{
+    box-shadow: 0px 1px 25px 2px rgb(255, 255, 255);
+    background-size:310px;
+    
+
+  }
+
+  to{
+    box-shadow: none;
+    background-size:310px;
+  }
+}
+/*This makes items slide in from the left.*/
+@keyframes slide-in{
+  from{
+    transform: translateX(-100%)
+  }
+
+  to{
+    transform: translateX(0)
+  }
+}
+
+/*This makes items slide in and fade in when scrolling.*/
+@keyframes slide-in-scroll{
+  from{
+    opacity: 0;
+    transform: translateX(-355%)
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
